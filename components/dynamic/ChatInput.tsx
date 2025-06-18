@@ -100,7 +100,9 @@ function PureChatInput({
         generateSummary(currentInput, newMessageId, threadId);
       } else {
         // --- Scenario 2: This is the first message of a new chat ---
-        const newThreadId = await createThread();
+        const newThreadId = await createThread({
+          title: "New Chat",
+        });
         const newMessageId = await sendMessage({
           threadId: newThreadId,
           content: currentInput,
