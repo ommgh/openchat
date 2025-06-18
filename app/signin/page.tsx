@@ -25,8 +25,8 @@ export default function SignInWithOAuth() {
       </div>
       <div className="bg-muted relative hidden lg:block">
         <Image
-          src="https://res.cloudinary.com/dcwsgwsfw/image/upload/v1750025682/openchat/openchat_full_screen_plilts.png"
-          alt="Image"
+          src="https://res.cloudinary.com/dcwsgwsfw/image/upload/v1750019919/openchat/chat-bg-noise_roaydw.svg"
+          alt="OpenChat"
           className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
           width={100}
           height={100}

@@ -1,4 +1,3 @@
-//file: chatInput.tsx
 import { ChevronDown, Check, ArrowUpIcon } from "lucide-react";
 import { memo, useCallback, useMemo } from "react";
 import { Textarea } from "@/components/ui/textarea";
