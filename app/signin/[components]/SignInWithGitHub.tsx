@@ -9,8 +9,9 @@ export function SignInWithGitHub() {
       variant="outline"
       type="button"
       onClick={() => void signIn("github")}
+      className="max-w-3xl w-full"
     >
-      <GitHubLogo className="mr-2 h-4 w-4" /> GitHub
+      <GitHubLogo className="mr-2 h-4 w-4" /> Continue With Github
     </Button>
   );
 }

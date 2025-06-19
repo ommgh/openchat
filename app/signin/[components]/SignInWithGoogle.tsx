@@ -9,8 +9,9 @@ export function SignInWithGoogle() {
       variant="outline"
       type="button"
       onClick={() => void signIn("google")}
+      className="max-w-3xl w-full"
     >
-      <GoogleLogo className="mr-2 h-4 w-4" /> Google
+      <GoogleLogo className="mr-2 h-4 w-4" /> Continue With Google
     </Button>
   );
 }
