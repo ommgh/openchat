@@ -88,7 +88,7 @@ export function ShareButton({ threadId }: ShareButtonProps) {
 
                 <div className="space-y-4">
                     {!sharedUrl ? (
-                        <Button onClick={handleShare} disabled={isSharing} className="w-full">
+                        <Button onClick={handleShare} disabled={isSharing} className="w-full rounded-tr-xl">
                             {isSharing ? "Creating link..." : "Create shareable link"}
                         </Button>
                     ) : (

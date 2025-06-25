@@ -22,7 +22,7 @@ function ChatLayout() {
                 <ThreadsSidebar/>
                 <SidebarInset>
                     <div
-                        className="flex min-h-svh flex-col"
+                        className="flex min-h-svh flex-col rounded-2xl border-white/10 border"
                         style={{
                             backgroundImage: "url(https://t3.chat/images/noise.png)",
                             backgroundRepeat: "repeat",

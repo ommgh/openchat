@@ -23,7 +23,7 @@ import { Link } from "@tanstack/react-router"
 import { useNavigate } from "@tanstack/react-router"
 import { useConvexAuth } from "convex/react"
 import { isAfter, isToday, isYesterday, subDays } from "date-fns"
-import { Image, Loader2, Pin, Search, Sparkles, UserIcon } from "lucide-react"
+import { Image, Loader2, LogIn, Pin, Search, Sparkles, UserIcon } from "lucide-react"
 import { useEffect, useMemo, useRef, useState } from "react"
 import { FolderItem } from "./threads/folder-item"
 import { NewFolderButton } from "./threads/new-folder-button"
@@ -460,25 +460,35 @@ export function ThreadsSidebar() {
 
                 <SidebarRail />
                 <SidebarFooter>
-                    <Link to="/settings" className="flex flex-row items-center gap-2 rounded-md p-2 hover:bg-foreground/10">
-                       <Avatar className="h-8 w-8 rounded-md">
-                        <AvatarImage
-                            src={session?.user?.image || undefined}
-                            alt={session?.user?.name || "User"}
-                        />
-                        <AvatarFallback>
-                            {session?.user?.name ? (
-                                getInitials(session?.user?.name)
-                            ) : (
-                                <UserIcon className="h-4 w-4 rounded-md" />
-                            )}
-                        </AvatarFallback>
-                    </Avatar>
-                     <div className="grid flex-1 text-left text-sm leading-tight">
-                <span className="truncate font-medium">{session?.user.name}</span>
-                <span className="truncate text-xs">{session?.user.email}</span>
-              </div>
-              </Link>
+                    {session?.user ? (
+                        <Link to="/settings" className="flex flex-row items-center gap-2 rounded-md p-2 hover:bg-foreground/10">
+                            <Avatar className="h-8 w-8 rounded-md">
+                                <AvatarImage
+                                    src={session?.user?.image || undefined}
+                                    alt={session?.user?.name || "User"}
+                                />
+                                <AvatarFallback>
+                                    {session?.user?.name ? (
+                                        getInitials(session?.user?.name)
+                                    ) : (
+                                        <UserIcon className="h-4 w-4 rounded-md" />
+                                    )}
+                                </AvatarFallback>
+                            </Avatar>
+                            <div className="grid flex-1 text-left text-sm leading-tight">
+                                <span className="truncate font-medium">{session?.user.name}</span>
+                                <span className="truncate text-xs">{session?.user.email}</span>
+                            </div>
+                        </Link>
+                    ) : (
+                        <Link to="/auth/$pathname" params={{ pathname: "sign-in" }} className="flex flex-row items-center gap-2 rounded-md p-2 hover:bg-foreground/10">
+                        <div className="flex items-center gap-2">
+                            <LogIn className="h-4 w-4" />
+                            Sign In
+                            </div>
+                        </Link>
+                        )
+                    }
                 </SidebarFooter>
             </Sidebar>
             <CommandK open={commandKOpen} onOpenChange={setCommandKOpen} />

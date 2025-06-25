@@ -98,6 +98,41 @@
   --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
 }
 
+.glass {
+  --background: transparent;
+  --foreground: #98cedf;
+  --card: transparent;
+  --card-foreground: #98cedf;
+  --popover: transparent;
+  --popover-foreground: #98cedf;
+  --primary: oklch(0.792 0.123 225.7 / 0.25); /* Keeping original for buttons */
+  --primary-foreground: oklch(1.0000 0 0); /* Keeping original for buttons */
+  --secondary: transparent;
+  --secondary-foreground: #98cedf;
+  --muted: transparent;
+  --muted-foreground: #98cedf99; /* Muted text with some transparency */
+  --accent: transparent;
+  --accent-foreground: #98cedf;
+  --destructive: oklch(0.6368 0.2078 25.3313); /* Keeping original for warnings */
+  --destructive-foreground: oklch(1.0000 0 0); /* Keeping original for warnings */
+  --border: oklch(1.0 0.0 0 / 0.10);
+  --input: oklch(1.0 0.0 0 / 0.10);
+  --ring: oklch(1.0 0.0 0 / 0.10);
+  --chart-1: oklch(1.0 0.0 0 / 0.10);
+  --chart-2: oklch(1.0 0.0 0 / 0.10);
+  --chart-3: oklch(1.0 0.0 0 / 0.10);
+  --chart-4: oklch(1.0 0.0 0 / 0.10);
+  --chart-5: oklch(1.0 0.0 0 / 0.10);
+  --sidebar: transparent;
+  --sidebar-foreground: #98cedf;
+  --sidebar-primary: oklch(0.6231 0.1880 259.8145);
+  --sidebar-primary-foreground: oklch(1.0000 0 0);
+  --sidebar-accent: transparent;
+  --sidebar-accent-foreground: #98cedf;
+  --sidebar-border: oklch(1.0 0.0 0 / 0.10);
+  --sidebar-ring: oklch(1.0 0.0 0 / 0.10);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -338,6 +373,10 @@
     }
     body {
         @apply bg-background text-foreground;
+        background-image: url("https://res.cloudinary.com/dcwsgwsfw/image/upload/v1750025682/openchat/openchat_full_screen_plilts.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
 
     ::selection {

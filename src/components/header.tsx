@@ -11,7 +11,7 @@ export function Header({ threadId }: { threadId?: string }) {
                         <SidebarTrigger />
                     </div>
                 </div>
-                <div className="pointer-events-auto flex items-center space-x-2 rounded-xl bg-background/10 p-2 backdrop-blur-sm">
+                <div className="pointer-events-auto flex items-center space-x-2 p-2">
                     {threadId && <ShareButton threadId={threadId} />}
                     <ThemeSwitcher />
                 </div>
