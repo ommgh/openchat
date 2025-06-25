@@ -24,7 +24,6 @@ import {
     SEARCH_PROVIDERS,
     useAvailableModels
 } from "@/lib/models-providers-shared"
-import Logo from "@/logo.svg"
 import { useConvexQuery } from "@convex-dev/react-query"
 import { createFileRoute } from "@tanstack/react-router"
 import { useMutation } from "convex/react"

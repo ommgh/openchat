@@ -75,7 +75,7 @@ export const Route = createRootRouteWithContext<{
             },
             {
                 property: "og:image",
-                content: `${SITE_URL}/opengraph.jpg`
+                content: `${SITE_URL}/opengraph.png`
             },
             {
                 property: "og:url",
@@ -104,7 +104,7 @@ export const Route = createRootRouteWithContext<{
             },
             {
                 name: "twitter:image",
-                content: `${SITE_URL}/opengraph.jpg`
+                content: `${SITE_URL}/opengraph.png`
             }
         ],
         links: [
