@@ -407,8 +407,9 @@ export function ThreadsSidebar() {
             <Sidebar variant="inset">
                 <SidebarHeader>
                     <div className="my-2 flex w-full items-center justify-center gap-2">
-                        <Link to="/"className="flex gap-2 font-bold text-2xl">
-                            [ openchat.one
+                        <Link to="/"className="flex items-center gap-2 font-bold text-2xl">
+                        <Sparkles className="mt-1 size-5" />
+                            openchat.one
                         </Link>
                     </div>
                     <Link
