@@ -10,8 +10,8 @@ import { Providers } from "../providers"
 
 // Configurable site metadata
 const SITE_TITLE = "OpenChat"
-const SITE_DESCRIPTION = "Blazing fast AI chatbot."
-const SITE_URL = "https://openchat.one"
+const SITE_DESCRIPTION = "The Best AI Chat Experience"
+const SITE_URL = "https://openchatone.vercel.app"
 
 const getAccessToken = createServerFn().handler(async (ctx) => {
     const headers = await getHeaders()
