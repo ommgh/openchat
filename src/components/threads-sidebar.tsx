@@ -23,14 +23,13 @@ import { Link } from "@tanstack/react-router"
 import { useNavigate } from "@tanstack/react-router"
 import { useConvexAuth } from "convex/react"
 import { isAfter, isToday, isYesterday, subDays } from "date-fns"
-import { Image, Loader2, LogIn, Pin, Search, Sparkles, UserIcon } from "lucide-react"
+import { Image, Loader2, LogIn, Pin, Search, Sparkle, UserIcon } from "lucide-react"
 import { useEffect, useMemo, useRef, useState } from "react"
 import { FolderItem } from "./threads/folder-item"
 import { NewFolderButton } from "./threads/new-folder-button"
 import { ThreadItem } from "./threads/thread-item"
 import { ThreadItemDialogs } from "./threads/thread-item-dialogs"
 import type { Thread } from "./threads/types"
-import { UserButton } from "./user-button"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
 
 function groupThreadsByTime(threads: Thread[]) {
@@ -408,7 +407,7 @@ export function ThreadsSidebar() {
                 <SidebarHeader>
                     <div className="my-2 flex w-full items-center justify-center gap-2">
                         <Link to="/"className="flex items-center gap-2 font-bold text-2xl">
-                        <Sparkles className="mt-1 size-5" />
+                        <Sparkle className="mt-1 size-5" />
                             openchat.one
                         </Link>
                     </div>
